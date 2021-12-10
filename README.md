@@ -137,8 +137,16 @@ yarn add @types/styled-components-react-native -D
     )
   }
   ```
+- [x]Utilizando proporções de medidas:
+  - No terminal:
+  ```js
+  yarn add react-native-responsive-fontsize
+  ```
+  - No arquivo styles.ts
+    import { RFPercentage, RFValue } from 'react-native-responsive-fontsize';
 
-
+    antes: height: 278px;
+    agora: height: ${RFPercentage(42)}px;
 
 
 # 🚀 Tecnologias utilizadas neste projeto
