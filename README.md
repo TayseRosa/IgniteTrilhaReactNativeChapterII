@@ -1,21 +1,36 @@
 <h1 align="center">Ignite - Trilha ReactNative - Chapter II </h1>
 
 #Índice
-- [🛠 Sobre o projeto Rocketseat Ignite - Trilha React Native - goFinance](#-sobre-o-projeto-rocketseat-ignite---trilha-react-native---gofinance)
+- [🛠 Projeto Rocketseat Ignite - Trilha React Native - goFinance](#-projeto-rocketseat-ignite---trilha-react-native---gofinance)
+  - [Iniciando o projeto](#iniciando-o-projeto)
+  - [Passando o projeto .js para typescript (.tsx e .ts)](#passando-o-projeto-js-para-typescript-tsx-e-ts)
+  - [Instalação do styled-components e suas tipagens](#instalação-do-styled-components-e-suas-tipagens)
+  - [Criando estilos Globais - Temas](#criando-estilos-globais---temas)
+  - [Utilizando fontes personalizadas](#utilizando-fontes-personalizadas)
+  - [Utilizando proporções de medida com RFPercentage e RFValue](#utilizando-proporções-de-medida-com-rfpercentage-e-rfvalue)
+  - [Usando ícones](#usando-ícones)
 - [🚀 Tecnologias utilizadas neste projeto](#-tecnologias-utilizadas-neste-projeto)
 - [📥 Como usar](#-como-usar)
 - [🚀 Autor](#-autor)
   
 ---
-# 🛠 Sobre o projeto Rocketseat Ignite - Trilha React Native - goFinance
+# 🛠 Projeto Rocketseat Ignite - Trilha React Native - goFinance
 
 <img src="https://github.com/TayseRosa/IgniteTrilhaReactNativeChapterII/blob/main/src/assets/goFinances.png" width="100%" height="auto" />
 
+## Iniciando o projeto
 
 - [x] Iniciando projeto com Expo - expo init [nomeDoProjeto]
+
+## Passando o projeto .js para typescript (.tsx e .ts)
+
 - [x] Passando projeto para TypeScript:
   - [x] Criar um arquivo tsconfig.json na raiz do projeto (touch tsconfig.json)
-  - [x] no terminal: expo start > Aceitar a instalação com (Y)
+  - [x] no terminal: 
+  ```js
+  expo start 
+  > Aceitar a instalação com (Y)
+  ```
   - [x] Após a instalação, o arquivo tsconfig.json deve ficar conforme o código abaixo:
   - [x] Mudar o app.js para app.tsx
 ```js
@@ -26,12 +41,14 @@
   "extends": "expo/tsconfig.base"
   }
 ```
-
+## Instalação do styled-components e suas tipagens
 - [x] Instalação do styled-components e suas tipagens: 
 ```js
 yarn add styled-components
 yarn add @types/styled-components-react-native -D
 ```
+
+## Criando estilos Globais - Temas
 
 - [x] Criando estilos Globais:
   - src > global > styles > theme.ts
@@ -57,8 +74,6 @@ yarn add @types/styled-components-react-native -D
   }
   ```
 
-
-
 - [x] Em app.tsx: import { ThemeProvider } from 'styled-components'
 - [x] Em app.tsx: import theme from './src/global/styles/theme';
   <ThemeProvider theme={theme}>
@@ -78,6 +93,8 @@ yarn add @types/styled-components-react-native -D
   export interface DefaultTheme extends ThemeType{}
   }
   ``` 
+
+## Utilizando fontes personalizadas 
 
 - [x] Utilizando fontes personalizadas
   - [x] expo install expo-font @expo-google-fonts/[NomeDaFonte]
@@ -137,16 +154,32 @@ yarn add @types/styled-components-react-native -D
     )
   }
   ```
+## Utilizando proporções de medida com RFPercentage e RFValue
+
 - [x]Utilizando proporções de medidas:
   - No terminal:
   ```js
   yarn add react-native-responsive-fontsize
   ```
   - No arquivo styles.ts
+  ```js
     import { RFPercentage, RFValue } from 'react-native-responsive-fontsize';
-
+  ```
     antes: height: 278px;
+
     agora: height: ${RFPercentage(42)}px;
+
+## Usando ícones
+Usando a lib vector-icons, direto no arquivo style.ts:
+```js
+//vector-icons - essa lib já vem instalada junto com Expo
+import { Feather } from '@expo/vector-icons';
+
+export const Icon = styled(Feather)`
+    color: ${({ theme }) => theme.colors.secondary};
+    font-size: ${RFValue(24)}px;
+`;
+```
 
 
 # 🚀 Tecnologias utilizadas neste projeto
