@@ -18,21 +18,70 @@
   - [x] no terminal: expo start > Aceitar a instalação com (Y)
   - [x] Após a instalação, o arquivo tsconfig.json deve ficar conforme o código abaixo:
   - [x] Mudar o app.js para app.tsx
-  ```js
+```js
   {
   "compilerOptions": {
     "strict": true,
   },
   "extends": "expo/tsconfig.base"
-}
+  }
+```
 
-  ```
-
-```js
 - [x] Instalação do styled-components e suas tipagens: 
+```js
 yarn add styled-components
 yarn add @types/styled-components-react-native -D
 ```
+
+- [x]Criando estilos Globais:
+  - src > global > styles > theme.ts
+  ```js
+  export default {
+  colors:{
+    primary: '#5636d3',
+
+    secondary: '#ff872c',
+    secondary_light: 'rgba(255,135,44,0.3)',
+
+    success: '#12a454',
+    success_light: 'rgba(18,164,84,0.5)',
+
+    attention: '#e83f5b',
+    attention_light: 'rgba(232,63,91,0.5)',
+
+    shape: '#ffffff',
+    title:'#363f5f',
+    text: '#969cb2',
+    background: '#f0f2f5'
+  }
+  }
+  ```
+
+
+
+- [x] Em app.tsx: import { ThemeProvider } from 'styled-components'
+- [x] Em app.tsx: import theme from './src/global/styles/theme';
+  <ThemeProvider theme={theme}>
+    <AppAqui />
+  </ThemeProvider>
+- [x] Para sobrescrever o theme e resolver o problema de sublinhado vermelho no colors: background-color: ${({ theme })=> theme.colors.primary}
+    src > global > styles > styled.d.ts
+
+  ```js
+  import 'styled-components';
+
+  import theme from './theme';
+
+  declare module 'styled-components' {
+    type ThemeType = typeof theme
+
+  export interface DefaultTheme extends ThemeType{}
+  }
+  ``` 
+
+
+
+
 
 
 # 🚀 Tecnologias utilizadas neste projeto
