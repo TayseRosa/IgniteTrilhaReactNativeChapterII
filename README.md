@@ -9,7 +9,7 @@
 ---
 # 🛠 Sobre o projeto Rocketseat Ignite - Trilha React Native - goFinance
 
-<img src="/public/images/igNews.png" width="100%" height="auto" />
+<img src="/public/src/assets/goFinances.png" width="100%" height="auto" />
 
 
 - [x] Iniciando projeto com Expo - expo init [nomeDoProjeto]
