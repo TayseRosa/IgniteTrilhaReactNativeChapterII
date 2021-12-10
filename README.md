@@ -33,7 +33,7 @@ yarn add styled-components
 yarn add @types/styled-components-react-native -D
 ```
 
-- [x]Criando estilos Globais:
+- [x] Criando estilos Globais:
   - src > global > styles > theme.ts
   ```js
   export default {
@@ -79,7 +79,64 @@ yarn add @types/styled-components-react-native -D
   }
   ``` 
 
+- [x] Utilizando fontes personalizadas
+  - [x] expo install expo-font @expo-google-fonts/[NomeDaFonte]
+  - [x] Em app.tsx: 
+  ```js
+    import {
+    useFonts,
+    Poppins_400Regular,
+    Poppins_500Medium,
+    Poppins_700Bold
+    }from '@expo-google-fonts/poppins';
+    
 
+    //Enquanto a font carrega, segura a tela de splash
+    const [ fontsLoaded ] = useFonts({
+      Poppins_400Regular,
+      Poppins_500Medium,
+      Poppins_700Bold
+    });
+
+
+    No terminal: ❯ expo install expo-app-loading
+  ```
+  A tela do app.tsx deve ficar assim:
+  ```js
+  import React from 'react';
+  import { ThemeProvider } from 'styled-components'
+
+  import theme from './src/global/styles/theme';
+  import { Dashboard } from './src/screens/Dashboard';
+
+  import {
+    useFonts,
+    Poppins_400Regular,
+    Poppins_500Medium,
+    Poppins_700Bold
+  }from '@expo-google-fonts/poppins';
+  import AppLoading from 'expo-app-loading';
+
+
+  export default function App() {
+    const [ fontsLoaded ] = useFonts({
+      Poppins_400Regular,
+      Poppins_500Medium,
+      Poppins_700Bold
+    });
+
+    if(!fontsLoaded) {
+      //Tela de Splash (a tela que aparece enquanto o app é carregado)
+      return <AppLoading />
+    }
+
+    return(
+      <ThemeProvider theme={theme}>
+        <Dashboard />
+      </ThemeProvider>
+    )
+  }
+  ```
 
 
 
