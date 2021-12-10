@@ -9,7 +9,7 @@
 ---
 # 🛠 Sobre o projeto Rocketseat Ignite - Trilha React Native - goFinance
 
-<img src="/public/src/assets/goFinances.png" width="100%" height="auto" />
+<img src="https://github.com/TayseRosa/IgniteTrilhaReactNativeChapterII/blob/main/src/assets/goFinances.png" width="100%" height="auto" />
 
 
 - [x] Iniciando projeto com Expo - expo init [nomeDoProjeto]
@@ -28,15 +28,20 @@
 
   ```
 
+```js
+- [x] Instalação do styled-components e suas tipagens: 
+yarn add styled-components
+yarn add @types/styled-components-react-native -D
+```
+
 
 # 🚀 Tecnologias utilizadas neste projeto
 O projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 - [x] JAVASCRIPT
-- [x] REACT JS
+- [x] REACT NATIVE
 - [x] TYPESCRIPT
-- [X] NEXT JS
-- [x] SASS
+- [x] STYLED COMPONENTS
 
 # 📥 Como usar
 ```js
