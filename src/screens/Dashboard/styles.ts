@@ -68,7 +68,7 @@ export const UserName = styled.Text`
 export const Icon = styled(Feather)`
     color: ${({ theme }) => theme.colors.secondary};
     font-size: ${RFValue(24)}px;
-`;
+`; 
 
 export const HighlightCards = styled.ScrollView.attrs({
     //Acessando as propriedades do ScrollView por dentro do styled-components
