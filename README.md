@@ -206,7 +206,7 @@ e passar todas as propriedades para o arquivo de estilos com styled-components, 
     horizontal: true,
     showsHorizontalScrollIndicator: false,//esconde barra de rolagem
     contentContainerStyle:{ paddingHorizontal:24 }//Adiciona estilização dentro da listagem
-})``;
+  })``;
 ```
 
 
