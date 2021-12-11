@@ -1,8 +1,9 @@
 import styled from 'styled-components/native';
-import { RFPercentage, RFValue } from 'react-native-responsive-fontsize';
 
 //vector-icons - essa lib já vem instalada junto com Expo
 import { Feather } from '@expo/vector-icons';
+
+import { RFPercentage, RFValue } from 'react-native-responsive-fontsize';
 
 export const Container = styled.View`
     flex:1;
@@ -46,6 +47,8 @@ export const Photo = styled.Image`
 
 export const User = styled.Text`
     margin-left: 17px;
+
+    background-color:red;
 `;
 
 export const UserGreeting = styled.Text`
@@ -56,13 +59,20 @@ export const UserGreeting = styled.Text`
 `; 
 
 export const UserName = styled.Text`
-color: ${({ theme }) => theme.colors.shape };
+    color: ${({ theme }) => theme.colors.shape };
 
-font-size: ${RFValue(18)}px;
-font-family: ${({ theme }) => theme.fonts.bold};
+    font-size: ${RFValue(18)}px;
+    font-family: ${({ theme }) => theme.fonts.bold};
 `;
 
 export const Icon = styled(Feather)`
     color: ${({ theme }) => theme.colors.secondary};
     font-size: ${RFValue(24)}px;
 `;
+
+export const HighlightCards = styled.ScrollView.attrs({
+    //Acessando as propriedades do ScrollView por dentro do styled-components
+    horizontal: true,
+    showsHorizontalScrollIndicator: false,//esconde barra de rolagem
+    contentContainerStyle:{ paddingHorizontal:24 }//Adiciona estilização dentro da listagem
+})``;
