@@ -10,6 +10,7 @@
   - [Utilizando proporções de medida com RFPercentage e RFValue](#utilizando-proporções-de-medida-com-rfpercentage-e-rfvalue)
   - [Usando ícones](#usando-ícones)
   - [Acessando propriedades da ScrollView(por exemplo) no Styled Components](#acessando-propriedades-da-scrollviewpor-exemplo-no-styled-components)
+  - [Tipando componente de botão - (TouchableOpacity)](#tipando-componente-de-botão---touchableopacity)
 - [🚀 Tecnologias utilizadas neste projeto](#-tecnologias-utilizadas-neste-projeto)
 - [📥 Como usar](#-como-usar)
 - [🚀 Autor](#-autor)
@@ -207,6 +208,33 @@ e passar todas as propriedades para o arquivo de estilos com styled-components, 
     showsHorizontalScrollIndicator: false,//esconde barra de rolagem
     contentContainerStyle:{ paddingHorizontal:24 }//Adiciona estilização dentro da listagem
   })``;
+```
+
+## Tipando componente de botão - (TouchableOpacity)
+```js
+//importar a lib do react native
+import { TouchableOpacityProps } from 'react-native';
+
+//Criar a interface extendendo a lib importada acima
+interface Props extends TouchableOpacityProps{
+  title: string;
+}
+
+//Usar a interface na chamada da função
+export function Button({ title, ...rest }: Props){
+  return(
+    <Container {...rest}>
+      <Title>
+        { title }
+      </Title>
+    </Container>
+  )
+}
+
+//Enquanto isso no styled-components...
+import { TouchableOpacity } from 'react-native';
+
+export const Container = styled(TouchableOpacity)``;
 ```
 
 
