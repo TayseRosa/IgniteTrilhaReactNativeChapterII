@@ -14,6 +14,7 @@
 - [🚀 Tecnologias utilizadas neste projeto](#-tecnologias-utilizadas-neste-projeto)
 - [📥 Como usar](#-como-usar)
 - [🚀 Autor](#-autor)
+- [📞 Contate a dev](#-contate-a-dev)
   
 ---
 # 🛠 Projeto Rocketseat Ignite - Trilha React Native - goFinance
@@ -275,8 +276,27 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 Feito com ❤️ por Tayse Rosa 🚀
 
+<hr />
+# 📞 Contate a dev
+
 👋🏽 Entre em contato!
 
-![Linkedin Badge](https://img.shields.io/badge/-TayseRosa-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/tayse-rosa-3b683151/)[![GitHub Badge](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/TayseRosa/)
+
+<a href="https://www.linkedin.com/in/tayse-rosa-3b683151/" target="_blank">
+<img src="https://img.shields.io/static/v1?label=LinkedIn&message=Tayse Rosa&color=blue&style=for-the-badge&logo=linkedin"/>
+</a>
+
+<a href="https://github.com/TayseRosa/" target="_blank">
+<img src="https://img.shields.io/static/v1?label=GitHub&message=Tayse Rosa&color=black&style=for-the-badge&logo=github"/>
+</a>
+
+<a href="https://api.whatsapp.com/send?phone=5551982368077" target="_blank">
+<img src="https://img.shields.io/static/v1?label=whatsapp&message=Tayse Rosa&color=green&style=for-the-badge&logo=whatsapp"/>
+</a>
+
+<a href="https://www.tayserosa.dev" target="_blank">
+<img src="https://img.shields.io/static/v1?label=Portfólio&message=Tayse Rosa&color=pink&style=for-the-badge&logo=portfolio"/>
+</a>
+
 
 <h5> Créditos: Rocketseat - Ignite - Trilha React JS </h5>

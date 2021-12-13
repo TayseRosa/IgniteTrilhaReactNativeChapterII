@@ -10,6 +10,8 @@ interface Props{
   title: string;
 }
 
+//Estilização da interface para Selecionar Categoria
+
 export function CategorySelect({title}:Props){
   return(
     <Container>
