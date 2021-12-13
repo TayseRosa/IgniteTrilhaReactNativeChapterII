@@ -14,7 +14,7 @@
 - [🚀 Tecnologias utilizadas neste projeto](#-tecnologias-utilizadas-neste-projeto)
 - [📥 Como usar](#-como-usar)
 - [🚀 Autor](#-autor)
-- [📞 Contate a dev](#-contate-a-dev)
+- [📞 Contato](#-contato)
   
 ---
 # 🛠 Projeto Rocketseat Ignite - Trilha React Native - goFinance
@@ -277,7 +277,8 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 Feito com ❤️ por Tayse Rosa 🚀
 
 <hr />
-# 📞 Contate a dev
+
+# 📞 Contato
 
 👋🏽 Entre em contato!
 
