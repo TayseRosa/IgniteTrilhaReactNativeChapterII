@@ -13,10 +13,11 @@
   - [Acessando propriedades da ScrollView(por exemplo) no Styled Components](#acessando-propriedades-da-scrollviewpor-exemplo-no-styled-components)
   - [Tipando componente de botão - (TouchableOpacity)](#tipando-componente-de-botão---touchableopacity)
   - [Resolvendo problemas de Button dentro da modal (Android) que não tem o mesmo comportamento (ios):](#resolvendo-problemas-de-button-dentro-da-modal-android-que-não-tem-o-mesmo-comportamento-ios)
+  - [Integrando com a Lib React hook Form](#integrando-com-a-lib-react-hook-form)
 - [🚀 Tecnologias utilizadas neste projeto](#-tecnologias-utilizadas-neste-projeto)
 - [📥 Como usar](#-como-usar)
-- [🚀 Autor](#-autor)
-- [📞 Contato](#-contato)
+- [🚀 Developer](#-developer)
+- [📞 Contate a Dev](#-contate-a-dev)
   
 ---
 # 🛠 Projeto Rocketseat Ignite - Trilha React Native - goFinance
@@ -252,6 +253,13 @@ export const Container = styled.View``;
 export const Container = styled(GestureHandlerRootView)``;
 ```
 
+## Integrando com a Lib React hook Form
+```js
+yarn add react-hook-form
+
+
+```
+
 
 # 🚀 Tecnologias utilizadas neste projeto
 O projeto foi desenvolvido utilizando as seguintes tecnologias:
@@ -279,7 +287,7 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 ``` 
 
-# 🚀 Autor
+# 🚀 Developer
 
 <a href="https://www.tayserosa.dev">
  <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/31596454?v=4" width="100px;" alt="Tayse Rosa" style="border-radius:50%"/>
@@ -291,7 +299,7 @@ Feito com ❤️ por Tayse Rosa 🚀
 
 <hr />
 
-# 📞 Contato
+# 📞 Contate a Dev
 
 👋🏽 Entre em contato!
 
