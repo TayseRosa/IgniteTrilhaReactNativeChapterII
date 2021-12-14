@@ -1,6 +1,7 @@
 <h1 align="center">Ignite - Trilha ReactNative - Chapter II </h1>
 
-#Índice
+# Índice
+- [Índice](#índice)
 - [🛠 Projeto Rocketseat Ignite - Trilha React Native - goFinance](#-projeto-rocketseat-ignite---trilha-react-native---gofinance)
   - [Iniciando o projeto](#iniciando-o-projeto)
   - [Passando o projeto .js para typescript (.tsx e .ts)](#passando-o-projeto-js-para-typescript-tsx-e-ts)

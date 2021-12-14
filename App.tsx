@@ -2,7 +2,7 @@ import React from 'react';
 import { ThemeProvider } from 'styled-components'
 
 import theme from './src/global/styles/theme';
-import { Register } from './src/screens/Register';
+import { CategorySelect } from './src/screens/CategorySelect';
 
 import {
   useFonts,
@@ -27,7 +27,7 @@ export default function App() {
 
   return(
     <ThemeProvider theme={theme}>
-      <Register />
+      <CategorySelect />
     </ThemeProvider>
   )
 }
