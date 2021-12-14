@@ -13,7 +13,6 @@
   - [Acessando propriedades da ScrollView(por exemplo) no Styled Components](#acessando-propriedades-da-scrollviewpor-exemplo-no-styled-components)
   - [Tipando componente de botão - (TouchableOpacity)](#tipando-componente-de-botão---touchableopacity)
   - [Resolvendo problemas de Button dentro da modal (Android) que não tem o mesmo comportamento (ios):](#resolvendo-problemas-de-button-dentro-da-modal-android-que-não-tem-o-mesmo-comportamento-ios)
-  - [Integrando com a Lib React hook Form](#integrando-com-a-lib-react-hook-form)
 - [🚀 Tecnologias utilizadas neste projeto](#-tecnologias-utilizadas-neste-projeto)
 - [📥 Como usar](#-como-usar)
 - [🚀 Developer](#-developer)
@@ -253,12 +252,7 @@ export const Container = styled.View``;
 export const Container = styled(GestureHandlerRootView)``;
 ```
 
-## Integrando com a Lib React hook Form
-```js
-yarn add react-hook-form
 
-
-```
 
 
 # 🚀 Tecnologias utilizadas neste projeto
