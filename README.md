@@ -12,6 +12,7 @@
   - [Usando ícones](#usando-ícones)
   - [Acessando propriedades da ScrollView(por exemplo) no Styled Components](#acessando-propriedades-da-scrollviewpor-exemplo-no-styled-components)
   - [Tipando componente de botão - (TouchableOpacity)](#tipando-componente-de-botão---touchableopacity)
+  - [Resolvendo problemas de Button dentro da modal (Android) que não tem o mesmo comportamento (ios):](#resolvendo-problemas-de-button-dentro-da-modal-android-que-não-tem-o-mesmo-comportamento-ios)
 - [🚀 Tecnologias utilizadas neste projeto](#-tecnologias-utilizadas-neste-projeto)
 - [📥 Como usar](#-como-usar)
 - [🚀 Autor](#-autor)
@@ -239,6 +240,17 @@ import { TouchableOpacity } from 'react-native';
 export const Container = styled(TouchableOpacity)``;
 ```
 
+## Resolvendo problemas de Button dentro da modal (Android) que não tem o mesmo comportamento (ios):
+
+No arquivo styles criado com styled-components, importar a lib:
+```js
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
+
+//onde fica o container do button, fazer a seguinte alteração:
+//Onde era uma View (neste exemplo), foi adicionado o (GestureHandlerRootView)
+export const Container = styled.View``;
+export const Container = styled(GestureHandlerRootView)``;
+```
 
 
 # 🚀 Tecnologias utilizadas neste projeto
