@@ -22,6 +22,10 @@
     - [Criando diretorios](#criando-diretorios)
       - [Criando o app.routes.tsx](#criando-o-approutestsx)
       - [Ajustes no arquivo App.tsx:](#ajustes-no-arquivo-apptsx)
+  - [Usar o theme do styled components no arquivo app.routes.tsx:](#usar-o-theme-do-styled-components-no-arquivo-approutestsx)
+  - [Propriedades do Navigator screenOptions:](#propriedades-do-navigator-screenoptions)
+    - [Descobrir em qual plataforma o App está rodando (Android ou IOS):](#descobrir-em-qual-plataforma-o-app-está-rodando-android-ou-ios)
+    - [Icons](#icons)
 - [🚀 Tecnologias utilizadas neste projeto](#-tecnologias-utilizadas-neste-projeto)
 - [📥 Como usar](#-como-usar)
 - [🚀 Developer](#-developer)
@@ -361,6 +365,82 @@ export function AppRoutes(){
   )
 ```
 
+## Usar o theme do styled components no arquivo app.routes.tsx:
+```js
+  import { useTheme } from 'styled-components';
+  ...
+  export function AppRoutes(){
+  const theme = useTheme();
+
+  return(
+    <Navigator
+      screenOptions={{
+        tabBarActiveTintColor: theme.colors.secondary,
+
+        tabBarInactiveTintColor: theme.colors.text
+      }}
+    >
+  )
+```
+
+## Propriedades do Navigator screenOptions:
+```js
+  <Navigator
+      screenOptions={{
+        headerShown: false,//cabeçalho 
+
+        tabBarActiveTintColor:'red', //Definir uma cor para quando o menu estiver ATIVO
+
+        tabBarInactiveTintColor:'blue',//Definir uma cor para quando o menu estiver INATIVO
+
+        tabBarLabelPosition: 'beside-icon',//Faz com que o icone fique ao lado, e não em cima.
+
+        tabBarStyle: {
+          height: 88,//Altura do bottomTab
+          paddingVertical: Platform.OS === 'ios' ? 20 : 0, //Condicional dependendo da plataforma
+        }
+      }}
+    >
+```
+
+### Descobrir em qual plataforma o App está rodando (Android ou IOS):
+```js
+import { Platform } from "react-native";
+
+...
+
+<Navigator
+      screenOptions={{
+        tabBarStyle: {
+          paddingVertical: Platform.OS === 'ios' ? 20 : 0, //Condicional dependendo da plataforma
+        }
+      }}
+    >
+```
+
+### Icons 
+```js
+import { MaterialIcons } from '@expo/vector-icons';//Importar a lib MaterialIcons
+
+...
+
+
+//Dentro do Screen:
+    <Screen 
+        name="Listagem"
+        component={Dashboard}
+        options={{ 
+          tabBarIcon: (({ size, color }) =>
+            <MaterialIcons 
+              name="format-list-bulleted"
+              size={24}
+              color="red"
+            />
+          )
+         }}
+      />  
+
+```
 
 
 # 🚀 Tecnologias utilizadas neste projeto
