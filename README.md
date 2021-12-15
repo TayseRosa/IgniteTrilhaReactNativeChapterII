@@ -13,6 +13,10 @@
   - [Acessando propriedades da ScrollView(por exemplo) no Styled Components](#acessando-propriedades-da-scrollviewpor-exemplo-no-styled-components)
   - [Tipando componente de botão - (TouchableOpacity)](#tipando-componente-de-botão---touchableopacity)
   - [Resolvendo problemas de Button dentro da modal (Android) que não tem o mesmo comportamento (ios):](#resolvendo-problemas-de-button-dentro-da-modal-android-que-não-tem-o-mesmo-comportamento-ios)
+  - [Validação de formulário no React Native](#validação-de-formulário-no-react-native)
+    - [Deixar a 1º letra da palavra digitada MAIUSCULA](#deixar-a-1º-letra-da-palavra-digitada-maiuscula)
+    - [Teclado numperico (Android e IOS)](#teclado-numperico-android-e-ios)
+    - [Fechar o teclado ao clicar em qualquer parte da tela:](#fechar-o-teclado-ao-clicar-em-qualquer-parte-da-tela)
 - [🚀 Tecnologias utilizadas neste projeto](#-tecnologias-utilizadas-neste-projeto)
 - [📥 Como usar](#-como-usar)
 - [🚀 Developer](#-developer)
@@ -252,7 +256,40 @@ export const Container = styled.View``;
 export const Container = styled(GestureHandlerRootView)``;
 ```
 
+## Validação de formulário no React Native
 
+### Deixar a 1º letra da palavra digitada MAIUSCULA
+```js
+  <InputForm 
+    name="name"
+    placeholder="Nome"
+    //VALIDAÇÃO DO FORMULARIO
+    autoCapitalize='sentences'//1º letra MAIUSCULA
+    autoCorrect={false}//tenta corrigir a palavra - neste caso FALSE
+  />
+```
+
+### Teclado numperico (Android e IOS)
+```js
+  <InputForm 
+    name="amount"
+    control={control}
+    placeholder="Preço"
+    //Validação do formulario
+    keyboardType="numeric"  
+  />
+```
+
+### Fechar o teclado ao clicar em qualquer parte da tela:
+```js
+  import { TouchableWithoutFeedback, Keyboard } from 'react-native';
+
+  <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+    <Container>
+      ......[todo o restante do código aqui...]
+    </Container>
+  </TouchableWithoutFeedback>
+```
 
 
 # 🚀 Tecnologias utilizadas neste projeto
