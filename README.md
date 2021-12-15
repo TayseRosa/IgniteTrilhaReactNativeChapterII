@@ -26,6 +26,7 @@
   - [Propriedades do Navigator screenOptions:](#propriedades-do-navigator-screenoptions)
     - [Descobrir em qual plataforma o App está rodando (Android ou IOS):](#descobrir-em-qual-plataforma-o-app-está-rodando-android-ou-ios)
     - [Icons no Bottom Tab Navigator](#icons-no-bottom-tab-navigator)
+  - [Persistindo dados com AsyncStorage](#persistindo-dados-com-asyncstorage)
 - [🚀 Tecnologias utilizadas neste projeto](#-tecnologias-utilizadas-neste-projeto)
 - [📥 Como usar](#-como-usar)
 - [🚀 Developer](#-developer)
@@ -442,6 +443,33 @@ import { MaterialIcons } from '@expo/vector-icons';//Importar a lib MaterialIcon
 
 ```
 
+## Persistindo dados com AsyncStorage
+```js
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
+export function Register(){
+  const dataKey = '@gofinance:transactions';//Criando a chave única para ser usada no Async Storage
+
+      //Dados que serão persistidos no dispositivo
+      const data = {
+      name: form.name,
+      amount: form.amount,
+      transactionType,
+      category: category.key
+    }
+
+    //É sempre importante usar o try catch para o AsyncStorage, para evitar de "crachar" a aplicação
+    try{
+      const dataKey = '@gofinance:transactions';
+      await AsyncStorage.setItem(dataKey,JSON.stringify(data));//Salvando os dados no Async Storage
+
+    //Caso dê erro...
+    } catch(error){
+      console.log(error);
+      Alert.alert('Não foi possivel salvar');
+    }
+}
+``` 
 
 # 🚀 Tecnologias utilizadas neste projeto
 O projeto foi desenvolvido utilizando as seguintes tecnologias:
