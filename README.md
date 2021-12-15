@@ -25,7 +25,7 @@
   - [Usar o theme do styled components no arquivo app.routes.tsx:](#usar-o-theme-do-styled-components-no-arquivo-approutestsx)
   - [Propriedades do Navigator screenOptions:](#propriedades-do-navigator-screenoptions)
     - [Descobrir em qual plataforma o App está rodando (Android ou IOS):](#descobrir-em-qual-plataforma-o-app-está-rodando-android-ou-ios)
-    - [Icons](#icons)
+    - [Icons no Bottom Tab Navigator](#icons-no-bottom-tab-navigator)
 - [🚀 Tecnologias utilizadas neste projeto](#-tecnologias-utilizadas-neste-projeto)
 - [📥 Como usar](#-como-usar)
 - [🚀 Developer](#-developer)
@@ -418,7 +418,7 @@ import { Platform } from "react-native";
     >
 ```
 
-### Icons 
+### Icons no Bottom Tab Navigator
 ```js
 import { MaterialIcons } from '@expo/vector-icons';//Importar a lib MaterialIcons
 
