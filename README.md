@@ -17,6 +17,11 @@
     - [Deixar a 1º letra da palavra digitada MAIUSCULA](#deixar-a-1º-letra-da-palavra-digitada-maiuscula)
     - [Teclado numperico (Android e IOS)](#teclado-numperico-android-e-ios)
     - [Fechar o teclado ao clicar em qualquer parte da tela:](#fechar-o-teclado-ao-clicar-em-qualquer-parte-da-tela)
+  - [Configurando o React Navigation (Versão 6.x)](#configurando-o-react-navigation-versão-6x)
+    - [Instalando libs](#instalando-libs)
+    - [Criando diretorios](#criando-diretorios)
+      - [Criando o app.routes.tsx](#criando-o-approutestsx)
+      - [Ajustes no arquivo App.tsx:](#ajustes-no-arquivo-apptsx)
 - [🚀 Tecnologias utilizadas neste projeto](#-tecnologias-utilizadas-neste-projeto)
 - [📥 Como usar](#-como-usar)
 - [🚀 Developer](#-developer)
@@ -290,6 +295,72 @@ export const Container = styled(GestureHandlerRootView)``;
     </Container>
   </TouchableWithoutFeedback>
 ```
+
+## Configurando o React Navigation (Versão 6.x)
+  ### Instalando libs
+```js
+  yarn add @react-navigation/native
+  expo install react-native-screens react-native-safe-area-context
+
+  //Bottom-tabs
+  yarn add @react-navigation/bottom-tabs 
+```
+Fonte: https://reactnavigation.org/docs/hello-react-navigation
+
+
+  ### Criando diretorios
+  criar a pasta
+  src > routes > app.routes.tsx
+
+  #### Criando o app.routes.tsx
+```js
+import React from "react";
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
+const { Navigator, Screen } = createBottomTabNavigator();
+//Telas
+import { Dashboard } from "../screens/Dashboard";
+import { Register } from "../screens/Register";
+
+
+export function AppRoutes(){
+  return(
+    <Navigator>
+      <Screen 
+        name="Listagem"
+        component={Dashboard}
+      />      
+
+      <Screen 
+        name="Cadastrar"
+        component={Register}
+      />      
+
+      <Screen 
+        name="Resumo"
+        component={Register}
+      />      
+    </Navigator>
+  );
+}
+``` 
+#### Ajustes no arquivo App.tsx:
+```js
+  import { NavigationContainer } from '@react-navigation/native'
+  import { AppRoutes } from './src/routes/app.routes';
+
+  ...
+
+  // ... e o return ficou assim:
+  return(
+    <ThemeProvider theme={theme}>
+      <NavigationContainer>
+        <AppRoutes />
+      </NavigationContainer>
+    </ThemeProvider>
+  )
+```
+
 
 
 # 🚀 Tecnologias utilizadas neste projeto
