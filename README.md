@@ -27,6 +27,7 @@
     - [Descobrir em qual plataforma o App está rodando (Android ou IOS):](#descobrir-em-qual-plataforma-o-app-está-rodando-android-ou-ios)
     - [Icons no Bottom Tab Navigator](#icons-no-bottom-tab-navigator)
   - [Persistindo dados com AsyncStorage](#persistindo-dados-com-asyncstorage)
+  - [Remover a coleção de objetos do Async Storage](#remover-a-coleção-de-objetos-do-async-storage)
 - [🚀 Tecnologias utilizadas neste projeto](#-tecnologias-utilizadas-neste-projeto)
 - [📥 Como usar](#-como-usar)
 - [🚀 Developer](#-developer)
@@ -470,6 +471,19 @@ export function Register(){
     }
 }
 ``` 
+
+## Remover a coleção de objetos do Async Storage
+- [x] *Obs.: Rodar o código abaixo apenas 1 vez para limpar..
+
+```js
+  useEffect(() => {
+    async function removeAll(){
+      await AsyncStorage.removeItem(dataKey);// dataKey = Chave do async storage
+    }
+
+    removeAll();
+  }, []);
+  ```
 
 # 🚀 Tecnologias utilizadas neste projeto
 O projeto foi desenvolvido utilizando as seguintes tecnologias:
