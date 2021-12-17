@@ -475,6 +475,19 @@ export function Register(){
 
 ## Remover a coleção de objetos do Async Storage
 - [x] *Obs.: Rodar o código abaixo apenas 1 vez para limpar..
+
+```js
+  useEffect(() => {
+    async function removeAll(){
+      await AsyncStorage.removeItem(dataKey);// dataKey = Chave do async storage
+    }
+
+    removeAll();
+  }, []);
+```
+
+## Hook useFocusEffect
+- [x] useFocusEffect = serve para que não haja "renders" desnecessariamente, memorizando esta função.
 Exemplo:
 ```js
 import React, { useCallback } from 'react';
@@ -485,19 +498,6 @@ useFocusEffect(useCallback(()=>{
   },[]));
 ```
 
-
-```js
-  useEffect(() => {
-    async function removeAll(){
-      await AsyncStorage.removeItem(dataKey);// dataKey = Chave do async storage
-    }
-
-    removeAll();
-  }, []);
-  ```
-
-  ## Hook useFocusEffect
-  - [x] useFocusEffect = serve para que não haja "renders" desnecessariamente, memorizando esta função.
 
 # 🚀 Tecnologias utilizadas neste projeto
 O projeto foi desenvolvido utilizando as seguintes tecnologias:
