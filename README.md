@@ -28,6 +28,7 @@
     - [Icons no Bottom Tab Navigator](#icons-no-bottom-tab-navigator)
   - [Persistindo dados com AsyncStorage](#persistindo-dados-com-asyncstorage)
   - [Remover a coleção de objetos do Async Storage](#remover-a-coleção-de-objetos-do-async-storage)
+  - [Hook useFocusEffect](#hook-usefocuseffect)
 - [🚀 Tecnologias utilizadas neste projeto](#-tecnologias-utilizadas-neste-projeto)
 - [📥 Como usar](#-como-usar)
 - [🚀 Developer](#-developer)
@@ -474,6 +475,16 @@ export function Register(){
 
 ## Remover a coleção de objetos do Async Storage
 - [x] *Obs.: Rodar o código abaixo apenas 1 vez para limpar..
+Exemplo:
+```js
+import React, { useCallback } from 'react';
+import { useFocusEffect } from '@react-navigation/native';
+
+useFocusEffect(useCallback(()=>{
+    loadTransactions();
+  },[]));
+```
+
 
 ```js
   useEffect(() => {
@@ -484,6 +495,9 @@ export function Register(){
     removeAll();
   }, []);
   ```
+
+  ## Hook useFocusEffect
+  - [x] useFocusEffect = serve para que não haja "renders" desnecessariamente, memorizando esta função.
 
 # 🚀 Tecnologias utilizadas neste projeto
 O projeto foi desenvolvido utilizando as seguintes tecnologias:
