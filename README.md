@@ -488,6 +488,8 @@ export function Register(){
 
 ## Hook useFocusEffect
 - [x] useFocusEffect = serve para que não haja "renders" desnecessariamente, memorizando esta função.
+- [x] Foi usado neste caso para a seguinte situação: Quando fazer um novo cadastro, ao clicar no botão, voltar para a tela principal (Listagem) e já apareça os cartões cadastrados;
+
 Exemplo:
 ```js
 import React, { useCallback } from 'react';
