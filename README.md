@@ -29,6 +29,9 @@
   - [Persistindo dados com AsyncStorage](#persistindo-dados-com-asyncstorage)
   - [Remover a coleção de objetos do Async Storage](#remover-a-coleção-de-objetos-do-async-storage)
   - [Hook useFocusEffect](#hook-usefocuseffect)
+  - [Possibilidades para resolver quando os dados do async storage ainda não foram carregados, no momento que a interface for ser exibida:](#possibilidades-para-resolver-quando-os-dados-do-async-storage-ainda-não-foram-carregados-no-momento-que-a-interface-for-ser-exibida)
+    - [Possibilidade de resolução nº1:](#possibilidade-de-resolução-nº1)
+    - [Possibilidade de resolução nº2:](#possibilidade-de-resolução-nº2)
 - [🚀 Tecnologias utilizadas neste projeto](#-tecnologias-utilizadas-neste-projeto)
 - [📥 Como usar](#-como-usar)
 - [🚀 Developer](#-developer)
@@ -499,6 +502,28 @@ useFocusEffect(useCallback(()=>{
     loadTransactions();
   },[]));
 ```
+
+## Possibilidades para resolver quando os dados do async storage ainda não foram carregados, no momento que a interface for ser exibida:
+
+  ### Possibilidade de resolução nº1:
+```js
+  //Utilizar o "Optional Chaining" como no exemplo abaixo:
+  amount={highlightData?.total?.amount} 
+
+  //Código completo:
+  <HighlightCard 
+    type="total"
+    title="Total" 
+    amount={highlightData?.total?.amount} 
+    lastTransaction="01 á 16 de Abril de 2021" 
+    />
+```
+  ### Possibilidade de resolução nº2:
+  Usar um loading, para que primeiro carregue os dados e depois a interface
+ ```js
+ //Usar um loading
+ 
+ ```
 
 
 # 🚀 Tecnologias utilizadas neste projeto
