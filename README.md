@@ -521,7 +521,7 @@ useFocusEffect(useCallback(()=>{
   ### Possibilidade de resolução nº2:
   Usar um loading, para que primeiro carregue os dados e depois a interface
  ```js
- //Usar um loading
+ //Usar um loading, por exemplo:
  import { ActivityIndicator } from 'react-native';
  .
  .
@@ -529,7 +529,7 @@ useFocusEffect(useCallback(()=>{
  const [ isLoading, setIsLoading ] = useState(true);
  
  ...
- 
+
  return (
     <Container>
       { isLoading ? 
