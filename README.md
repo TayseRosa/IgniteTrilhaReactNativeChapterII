@@ -33,6 +33,7 @@
     - [Possibilidade de resolução nº1:](#possibilidade-de-resolução-nº1)
     - [Possibilidade de resolução nº2:](#possibilidade-de-resolução-nº2)
   - [Utilizando gráfico na aplicação](#utilizando-gráfico-na-aplicação)
+  - [Trabalhando com datas - Lib date-fns](#trabalhando-com-datas---lib-date-fns)
 - [🚀 Tecnologias utilizadas neste projeto](#-tecnologias-utilizadas-neste-projeto)
 - [📥 Como usar](#-como-usar)
 - [🚀 Developer](#-developer)
@@ -568,7 +569,45 @@ import { VictoryPie } from 'victory-native';
 />
 ```
 
-##
+## Trabalhando com datas - Lib date-fns
+- [x] - Instalando libs necessárias DateFNS
+```js
+yarn add date-fns
+```
+
+Mão no código...
+
+```js
+import { addMonths, subMonths, format } from 'date-fns';
+import { ptBR } from 'date-fns/locale'; //Recurso do date-fns para traduzir os meses do ano
+
+
+const [ selectedDate, setSelectedDate ] = useState(new Date());//Salva já pegando a data atual
+
+...
+
+//Usando o addMonths e o subMonths
+function handleDateChange(action: 'next' | 'prev'){
+if (action === 'next'){
+  const newDate = addMonths(selectedDate, 1) //Pega a data selecionada, e ADICIONA + 1
+  setSelected(newDate)
+}else{
+  const newDate = subMonths(selectedDate, 1) //Pega a data selecionada, e SUBTRAI - 1
+  setSelected(newDate)
+}
+}
+
+  //Aplicar a função acima, no botão correspondente:
+  <MonthSelectButton onPress={() => handleChangeData('prev')}>
+    <MonthSelectIcon name="chevron-left" />
+  </MonthSelectButton>
+
+  //Usando o format do Date-FNS - (Mês e ano traduzido)
+  <Month>
+    { format(selectedDate, 'MMMM, yyyy', { locale: ptBR }) }
+  </Month>
+
+```
 
 
 # 🚀 Tecnologias utilizadas neste projeto
