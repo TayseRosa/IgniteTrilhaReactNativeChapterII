@@ -34,6 +34,7 @@
     - [Possibilidade de resolução nº2:](#possibilidade-de-resolução-nº2)
   - [Utilizando gráfico na aplicação](#utilizando-gráfico-na-aplicação)
   - [Trabalhando com datas - Lib date-fns](#trabalhando-com-datas---lib-date-fns)
+  - [Aplicando loading](#aplicando-loading)
 - [🚀 Tecnologias utilizadas neste projeto](#-tecnologias-utilizadas-neste-projeto)
 - [📥 Como usar](#-como-usar)
 - [🚀 Developer](#-developer)
@@ -607,6 +608,27 @@ if (action === 'next'){
     { format(selectedDate, 'MMMM, yyyy', { locale: ptBR }) }
   </Month>
 
+```
+
+## Aplicando loading
+```js
+  //Usar um loading, por exemplo:
+import { ActivityIndicator } from 'react-native';
+.
+.
+.
+const [ isLoading, setIsLoading ] = useState(true);
+
+...
+
+return (
+   <Container>
+     { isLoading ? 
+         <ActivityIndicator size="large" color="red"  /> 
+       : 
+     <RestanteDoAppAqui.. />
+     }
+)
 ```
 
 

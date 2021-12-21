@@ -1,4 +1,5 @@
-import React,{ useEffect, useState } from 'react';
+import React,{ useEffect, useState, useCallback } from 'react';
+import { ActivityIndicator } from 'react-native';
 
 //Libs
 import AsyncStorage from '@react-native-async-storage/async-storage'
@@ -6,6 +7,7 @@ import { VictoryPie } from 'victory-native';
 import { RFValue } from 'react-native-responsive-fontsize';
 import { addMonths, subMonths, format } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
+import { useFocusEffect } from '@react-navigation/native';
 
 //Hooks
 import { useTheme } from 'styled-components';//Usar o tema
@@ -14,19 +16,23 @@ import { useBottomTabBarHeight } from '@react-navigation/bottom-tabs';
 //Component
 import { HistoryCard } from '../../components/HistoryCard';
 
+import { categories } from '../../utils/categories';
+
 import {
   Container,
   Header,
   Title,
   Content,
+
   ChartContainer,
   MonthSelect,
   MonthSelectButton,
   MonthSelectIcon,
   Month,
-} from './styles';
 
-import { categories } from '../../utils/categories';
+  LoadContainer,
+
+} from './styles';
 
 interface TransactionData {
   type: 'positive' | 'negative';
@@ -47,11 +53,14 @@ interface CategoryData {
 
 export function Resume(){
 
+  const [ isLoading, setIsLoading ]  = useState(true);
   const [ selectedDate, setSelectedDate ] = useState(new Date());
   const [ totalByCategories, setTotalByCategories ] = useState<CategoryData[]>([]);
   const theme = useTheme();
 
   function handleChangeData(action: 'next' | 'prev'){
+    setIsLoading(true);
+    
     if(action === 'next'){
       setSelectedDate(addMonths(selectedDate, 1));
     }else{
@@ -115,18 +124,32 @@ export function Resume(){
     });
 
     setTotalByCategories(totalByCategory);
+    setIsLoading(false);
   }
 
   useEffect(() =>{
     loadData();
   },[selectedDate]);
 
+  useFocusEffect(useCallback(() => {
+    loadData();
+  },[]));
+
   return(
     <Container>
       <Header>
         <Title> Resumo por categoria </Title>
       </Header>
-
+      {
+        isLoading ? 
+          <LoadContainer>
+            <ActivityIndicator 
+              color={theme.colors.primary}
+              size="large"
+            />
+          </LoadContainer>
+        :
+        
       <Content
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{
@@ -174,7 +197,7 @@ export function Resume(){
         ))
       }
       </Content>
-
+    }
     </Container>
   )
 }
