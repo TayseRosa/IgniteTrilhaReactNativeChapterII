@@ -547,7 +547,9 @@ useFocusEffect(useCallback(()=>{
 ```js
 ❯ yarn add victory-native
 ❯ yarn add react-native-svg //Vai precisar também, pois a lib utiliza SVG, isso é muito bom por questões de performance
+```
 
+```js
 import { VictoryPie } from 'victory-native';
 
 <VictoryPie 
@@ -565,6 +567,8 @@ import { VictoryPie } from 'victory-native';
   y="total"
 />
 ```
+
+##
 
 
 # 🚀 Tecnologias utilizadas neste projeto
