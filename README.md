@@ -32,6 +32,7 @@
   - [Possibilidades para resolver quando os dados do async storage ainda não foram carregados, no momento que a interface for ser exibida:](#possibilidades-para-resolver-quando-os-dados-do-async-storage-ainda-não-foram-carregados-no-momento-que-a-interface-for-ser-exibida)
     - [Possibilidade de resolução nº1:](#possibilidade-de-resolução-nº1)
     - [Possibilidade de resolução nº2:](#possibilidade-de-resolução-nº2)
+  - [Utilizando gráfico na aplicação](#utilizando-gráfico-na-aplicação)
 - [🚀 Tecnologias utilizadas neste projeto](#-tecnologias-utilizadas-neste-projeto)
 - [📥 Como usar](#-como-usar)
 - [🚀 Developer](#-developer)
@@ -540,6 +541,30 @@ useFocusEffect(useCallback(()=>{
  )
 
  ```
+
+ ## Utilizando gráfico na aplicação
+- [x] Lib VictoryPie
+```js
+❯ yarn add victory-native
+❯ yarn add react-native-svg //Vai precisar também, pois a lib utiliza SVG, isso é muito bom por questões de performance
+
+import { VictoryPie } from 'victory-native';
+
+<VictoryPie 
+  data={totalByCategories}
+  colorScale={totalByCategories.map(category => category.color)}
+  style={{
+    labels: { 
+      fontSize: RFValue(18),
+      fontWeight: 'bold',
+      fill: theme.colors.shape
+    }
+  }}
+  labelRadius={100}
+  x="percent"
+  y="total"
+/>
+```
 
 
 # 🚀 Tecnologias utilizadas neste projeto
