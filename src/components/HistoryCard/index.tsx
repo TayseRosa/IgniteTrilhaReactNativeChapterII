@@ -19,9 +19,11 @@ export function HistoryCard({
 }: Props){
   return(
     <Container color={color}>
+
       <Title> { title } </Title>
 
       <Amount> { amount } </Amount>
+      
     </Container>
   )
 }
