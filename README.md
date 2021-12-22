@@ -38,6 +38,7 @@
   - [Lib react-native-svg-transformer](#lib-react-native-svg-transformer)
     - [Tipando a importação do svg](#tipando-a-importação-do-svg)
   - [Context](#context)
+    - [Refatorando Contexto e Criando nosso próprio Hook](#refatorando-contexto-e-criando-nosso-próprio-hook)
 - [🚀 Tecnologias utilizadas neste projeto](#-tecnologias-utilizadas-neste-projeto)
 - [📥 Como usar](#-como-usar)
 - [🚀 Developer](#-developer)
@@ -704,6 +705,8 @@ export function SignIn(){
   console.log(data);//Vai mostrar no console um array vazio, para testar, basta alterar em App.tsx por exemplo: <AuthContext.Provider value={'Theo Leite'}>
 }
 ```
+
+### Refatorando Contexto e Criando nosso próprio Hook
 
 
 # 🚀 Tecnologias utilizadas neste projeto
