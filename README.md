@@ -36,6 +36,8 @@
   - [Trabalhando com datas - Lib date-fns](#trabalhando-com-datas---lib-date-fns)
   - [Aplicando loading](#aplicando-loading)
   - [Lib react-native-svg-transformer](#lib-react-native-svg-transformer)
+    - [Tipando a importação do svg](#tipando-a-importação-do-svg)
+  - [Context](#context)
 - [🚀 Tecnologias utilizadas neste projeto](#-tecnologias-utilizadas-neste-projeto)
 - [📥 Como usar](#-como-usar)
 - [🚀 Developer](#-developer)
@@ -661,6 +663,45 @@ module.exports = (async () => {
 })();
 ```
 Fonte Github: https://github.com/kristerkari/react-native-svg-transformer
+
+### Tipando a importação do svg 
+Em src, criar a pasta @types > svg > index.d.ts com o seguinte código:
+```js
+  declare module "*.svg"{
+  import React from 'react';
+  import { SvgProps } from 'react-native-svg';
+  const content: React.FC<SvgProps>/
+  export default content;
+}
+```
+
+## Context
+
+Na pasta src, criar um arquivo AuthContext.tsx com o seguinte código inicial (bem simples):
+```js
+
+``` 
+No App.tsx:
+```js
+//Importação do Context
+import { AuthContext } from './src/AuthContext';
+
+<AuthContext.Provider value={[]}>
+  <RESTANTE DA APLICAÇÃO AQUI>
+</AuthContext.Provider>
+```
+E, na tela que queira acessar o context, fazer o seguinte:
+```js
+import { useContext } from 'react';
+
+//Contexto
+import { AuthContext } from '../../AuthContext';
+
+export function SignIn(){
+  const data = useContext(AuthContext);
+  console.log(data);//Vai mostrar no console um array vazio, para testar, basta alterar em App.tsx por exemplo: <AuthContext.Provider value={'Theo Leite'}>
+}
+```
 
 
 # 🚀 Tecnologias utilizadas neste projeto
