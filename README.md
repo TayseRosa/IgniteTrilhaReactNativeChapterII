@@ -35,6 +35,7 @@
   - [Utilizando gráfico na aplicação](#utilizando-gráfico-na-aplicação)
   - [Trabalhando com datas - Lib date-fns](#trabalhando-com-datas---lib-date-fns)
   - [Aplicando loading](#aplicando-loading)
+  - [Lib react-native-svg-transformer](#lib-react-native-svg-transformer)
 - [🚀 Tecnologias utilizadas neste projeto](#-tecnologias-utilizadas-neste-projeto)
 - [📥 Como usar](#-como-usar)
 - [🚀 Developer](#-developer)
@@ -630,6 +631,36 @@ return (
      }
 )
 ```
+
+## Lib react-native-svg-transformer
+```js
+❯ yarn add react-native-svg-transformer
+```
+Alteração no metro.config.js:
+```js
+// expo v40:
+const { getDefaultConfig } = require("@expo/metro-config");
+
+// expo v41: 
+// remove the @ (see: https://blog.expo.io/expo-sdk-41-12cc5232f2ef)
+const { getDefaultConfig } = require("expo/metro-config");
+
+module.exports = (async () => {
+  const {
+    resolver: { sourceExts, assetExts }
+  } = await getDefaultConfig(__dirname);
+  return {
+    transformer: {
+      babelTransformerPath: require.resolve("react-native-svg-transformer")
+    },
+    resolver: {
+      assetExts: assetExts.filter(ext => ext !== "svg"),
+      sourceExts: [...sourceExts, "svg"]
+    }
+  };
+})();
+```
+Fonte Github: https://github.com/kristerkari/react-native-svg-transformer
 
 
 # 🚀 Tecnologias utilizadas neste projeto
