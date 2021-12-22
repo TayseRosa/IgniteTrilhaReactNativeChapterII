@@ -764,11 +764,13 @@ Exemplo:
 CLIENT_ID=9131923ukjnfkdjsn19827319287
 REDIRECT_URI=https://linkdeteste.com
 ```
-Chamar as constantes da seguinte forma:
+-[x]Chamar as constantes da seguinte forma:
 ```js
 const { CLIENT_ID } = process.env;
 const { REDIRECT_URI } = process.env;
 ```
+-[x]no arquivo gitignore adicionar o .env
+
 
 # 🚀 Tecnologias utilizadas neste projeto
 O projeto foi desenvolvido utilizando as seguintes tecnologias:
