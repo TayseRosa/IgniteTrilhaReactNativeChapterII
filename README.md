@@ -679,7 +679,9 @@ Em src, criar a pasta @types > svg > index.d.ts com o seguinte código:
 
 Na pasta src, criar um arquivo AuthContext.tsx com o seguinte código inicial (bem simples):
 ```js
+import { createContext } from "react";
 
+export const AuthContext = createContext([]);
 ``` 
 No App.tsx:
 ```js

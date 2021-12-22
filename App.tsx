@@ -41,7 +41,7 @@ export default function App() {
       <NavigationContainer>
         <StatusBar barStyle="light-content" />
 
-        <AuthContext.Provider value={'Theo Leite'}>
+        <AuthContext.Provider value={[]}>
 
           <SignIn />
         
