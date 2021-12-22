@@ -42,7 +42,7 @@
     - [Configurando o OAuth](#configurando-o-oauth)
     - [Configurando credenciais](#configurando-credenciais)
   - [Quando usar try catch](#quando-usar-try-catch)
-  - [](#)
+  - [Tratando dados sensíveis](#tratando-dados-sensíveis)
 - [🚀 Tecnologias utilizadas neste projeto](#-tecnologias-utilizadas-neste-projeto)
 - [📥 Como usar](#-como-usar)
 - [🚀 Developer](#-developer)
@@ -749,8 +749,26 @@ Quando estamos lidando com autenticação (ou com qualquer contexto externo à a
   }
 ```
 
-## 
-
+## Tratando dados sensíveis
+-[x] Instalar a lib babel-plugin-inline-dotenv
+```js
+❯ yarn add babel-plugin-inline-dotenv
+```
+-[x] no arquivo babel.config.js adicionar a linha abaixo:
+```js
+  plugins: ["inline-dotenv"]
+```
+-[x] na raiz do projeto, criar um arquivo .env, que vai ser onde vão ficar os dados sensíveis
+Exemplo:
+```js
+CLIENT_ID=9131923ukjnfkdjsn19827319287
+REDIRECT_URI=https://linkdeteste.com
+```
+Chamar as constantes da seguinte forma:
+```js
+const { CLIENT_ID } = process.env;
+const { REDIRECT_URI } = process.env;
+```
 
 # 🚀 Tecnologias utilizadas neste projeto
 O projeto foi desenvolvido utilizando as seguintes tecnologias:
