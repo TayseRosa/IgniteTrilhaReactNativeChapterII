@@ -38,7 +38,9 @@
   - [Lib react-native-svg-transformer](#lib-react-native-svg-transformer)
     - [Tipando a importação do svg](#tipando-a-importação-do-svg)
   - [Context](#context)
-    - [Refatorando Contexto e Criando nosso próprio Hook](#refatorando-contexto-e-criando-nosso-próprio-hook)
+  - [Autenticação com Google](#autenticação-com-google)
+    - [Confugurando o OAuth](#confugurando-o-oauth)
+    - [Configurando credenciais](#configurando-credenciais)
 - [🚀 Tecnologias utilizadas neste projeto](#-tecnologias-utilizadas-neste-projeto)
 - [📥 Como usar](#-como-usar)
 - [🚀 Developer](#-developer)
@@ -706,7 +708,36 @@ export function SignIn(){
 }
 ```
 
-### Refatorando Contexto e Criando nosso próprio Hook
+## Autenticação com Google
+  ### Confugurando o OAuth
+- [x] https://docs.expo.dev/guides/authentication/
+- [x] Google 
+- [x] Clicar em Create Google App
+  - [x] Criar novo projeto
+  - [x] Nome do projeto e clicar em CRIAR
+  - [x] Tela de consentimento OAuth - Selecionar a opção Externo
+  - [x] Preencher as informações do App (nome, email) Dados do contato do desenvolvedor.
+  - [x] Adicionar escopo
+    - [x] selecionar as 2 primeiras opções(email, profile)
+    - [x] Deixar SEM usuario de teste
+  ### Configurando credenciais
+  - [x] Tela de concentimento OAuth
+    - [x] Habilitar a opção "PUBLICAR APLICATIVO"
+  - [X] Credenciais
+    - [x] Clicar em Criar Credenciais > IS do cliente OAuth
+      - [x] Tipo de aplicativo: Aplicativo da web
+      - [x] Nome: goFinance
+      - [x] Origem JavaScript autorizadas: (Adicionar URI)
+        - [x]  https://auth.expo.io/@your-username/your-project-slug [Confira na documentação: https://docs.expo.dev/guides/authentication/#google]
+        - [x] Expo.io > Área de membros (account owner)
+        - [x] your-project-slug - Lá em app.json acrescentar:
+          ```js
+            "schema":"gofinances",
+          ```
+        - [x] Clicar em CRIAR e vai aparecer o ID e a Chave Secreta (pode fechar esta tela, pois pode pegar ela futuramente)
+        
+
+
 
 
 # 🚀 Tecnologias utilizadas neste projeto
