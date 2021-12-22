@@ -39,7 +39,7 @@
     - [Tipando a importação do svg](#tipando-a-importação-do-svg)
   - [Context](#context)
   - [Autenticação com Google](#autenticação-com-google)
-    - [Confugurando o OAuth](#confugurando-o-oauth)
+    - [Configurando o OAuth](#configurando-o-oauth)
     - [Configurando credenciais](#configurando-credenciais)
 - [🚀 Tecnologias utilizadas neste projeto](#-tecnologias-utilizadas-neste-projeto)
 - [📥 Como usar](#-como-usar)
@@ -709,7 +709,7 @@ export function SignIn(){
 ```
 
 ## Autenticação com Google
-  ### Confugurando o OAuth
+  ### Configurando o OAuth
 - [x] https://docs.expo.dev/guides/authentication/
 - [x] Google 
 - [x] Clicar em Create Google App
