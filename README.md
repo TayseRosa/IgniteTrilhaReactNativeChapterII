@@ -41,6 +41,8 @@
   - [Autenticação com Google](#autenticação-com-google)
     - [Configurando o OAuth](#configurando-o-oauth)
     - [Configurando credenciais](#configurando-credenciais)
+  - [Quando usar try catch](#quando-usar-try-catch)
+  - [](#)
 - [🚀 Tecnologias utilizadas neste projeto](#-tecnologias-utilizadas-neste-projeto)
 - [📥 Como usar](#-como-usar)
 - [🚀 Developer](#-developer)
@@ -737,7 +739,17 @@ export function SignIn(){
         - [x] Clicar em CRIAR e vai aparecer o ID e a Chave Secreta (pode fechar esta tela, pois pode pegar ela futuramente)
         
 
+## Quando usar try catch
+Quando estamos lidando com autenticação (ou com qualquer contexto externo à aplicação), tratar com try catch para não "crachar a aplicação"
+```js
+  try{
+    
+  }catch(error){
 
+  }
+```
+
+## 
 
 
 # 🚀 Tecnologias utilizadas neste projeto
