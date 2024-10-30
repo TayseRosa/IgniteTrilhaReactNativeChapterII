@@ -1,56 +1,5 @@
 <h1 align="center">Ignite - Trilha ReactNative - Chapter II </h1>
 
-# Índice
-- [Índice](#índice)
-- [🛠 Projeto Rocketseat Ignite - Trilha React Native - goFinance](#-projeto-rocketseat-ignite---trilha-react-native---gofinance)
-  - [Iniciando o projeto](#iniciando-o-projeto)
-  - [Passando o projeto .js para typescript (.tsx e .ts)](#passando-o-projeto-js-para-typescript-tsx-e-ts)
-  - [Instalação do styled-components e suas tipagens](#instalação-do-styled-components-e-suas-tipagens)
-  - [Criando estilos Globais - Temas](#criando-estilos-globais---temas)
-  - [Utilizando fontes personalizadas](#utilizando-fontes-personalizadas)
-  - [Utilizando proporções de medida com RFPercentage e RFValue](#utilizando-proporções-de-medida-com-rfpercentage-e-rfvalue)
-  - [Usando ícones](#usando-ícones)
-  - [Acessando propriedades da ScrollView(por exemplo) no Styled Components](#acessando-propriedades-da-scrollviewpor-exemplo-no-styled-components)
-  - [Tipando componente de botão - (TouchableOpacity)](#tipando-componente-de-botão---touchableopacity)
-  - [Resolvendo problemas de Button dentro da modal (Android) que não tem o mesmo comportamento (ios):](#resolvendo-problemas-de-button-dentro-da-modal-android-que-não-tem-o-mesmo-comportamento-ios)
-  - [Validação de formulário no React Native](#validação-de-formulário-no-react-native)
-    - [Deixar a 1º letra da palavra digitada MAIUSCULA](#deixar-a-1º-letra-da-palavra-digitada-maiuscula)
-    - [Teclado numperico (Android e IOS)](#teclado-numperico-android-e-ios)
-    - [Fechar o teclado ao clicar em qualquer parte da tela:](#fechar-o-teclado-ao-clicar-em-qualquer-parte-da-tela)
-  - [Configurando o React Navigation (Versão 6.x)](#configurando-o-react-navigation-versão-6x)
-    - [Instalando libs](#instalando-libs)
-    - [Criando diretorios](#criando-diretorios)
-      - [Criando o app.routes.tsx](#criando-o-approutestsx)
-      - [Ajustes no arquivo App.tsx:](#ajustes-no-arquivo-apptsx)
-  - [Usar o theme do styled components no arquivo app.routes.tsx:](#usar-o-theme-do-styled-components-no-arquivo-approutestsx)
-  - [Propriedades do Navigator screenOptions:](#propriedades-do-navigator-screenoptions)
-    - [Descobrir em qual plataforma o App está rodando (Android ou IOS):](#descobrir-em-qual-plataforma-o-app-está-rodando-android-ou-ios)
-    - [Icons no Bottom Tab Navigator](#icons-no-bottom-tab-navigator)
-  - [Persistindo dados com AsyncStorage](#persistindo-dados-com-asyncstorage)
-  - [Remover a coleção de objetos do Async Storage](#remover-a-coleção-de-objetos-do-async-storage)
-  - [Hook useFocusEffect](#hook-usefocuseffect)
-  - [Possibilidades para resolver quando os dados do async storage ainda não foram carregados, no momento que a interface for ser exibida:](#possibilidades-para-resolver-quando-os-dados-do-async-storage-ainda-não-foram-carregados-no-momento-que-a-interface-for-ser-exibida)
-    - [Possibilidade de resolução nº1:](#possibilidade-de-resolução-nº1)
-    - [Possibilidade de resolução nº2:](#possibilidade-de-resolução-nº2)
-  - [Utilizando gráfico na aplicação](#utilizando-gráfico-na-aplicação)
-  - [Trabalhando com datas - Lib date-fns](#trabalhando-com-datas---lib-date-fns)
-  - [Aplicando loading](#aplicando-loading)
-  - [Lib react-native-svg-transformer](#lib-react-native-svg-transformer)
-    - [Tipando a importação do svg](#tipando-a-importação-do-svg)
-  - [Context](#context)
-  - [Autenticação com Google](#autenticação-com-google)
-    - [Configurando o OAuth](#configurando-o-oauth)
-    - [Configurando credenciais](#configurando-credenciais)
-  - [Quando usar try catch](#quando-usar-try-catch)
-  - [Tratando dados sensíveis](#tratando-dados-sensíveis)
-- [🚀 Tecnologias utilizadas neste projeto](#-tecnologias-utilizadas-neste-projeto)
-- [📥 Como usar](#-como-usar)
-- [🚀 Developer](#-developer)
-- [📞 Contate a Dev](#-contate-a-dev)
-  
----
-# 🛠 Projeto Rocketseat Ignite - Trilha React Native - goFinance
-
 <img src="https://github.com/TayseRosa/IgniteTrilhaReactNativeChapterII/blob/main/src/assets/goFinances.png" width="100%" height="auto" />
 
 ## Iniciando o projeto
